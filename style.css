@@ -3,12 +3,17 @@
 *{
     text-align: center; 
     font-family: "Roboto",Arial, Helvetica, sans-serif; 
-    font-size: 20px; 
+    font-size: 20px;  
     transition: .5s;
-    
+}
+
+:root{
+    --premiere-color: gray;
+    --seconde-color: #ffffff;
+    --troisieme-color: #03032f;
 }
 body{
-    background:linear-gradient(to bottom, #333,#fff) ;
+    background:linear-gradient(to bottom, var(--premiere-color), var(--seconde-color)) ;
     background-repeat: no-repeat;
     background-attachment: fixed; 
     position:relative;
@@ -18,15 +23,15 @@ body{
 } 
 button{
     border-radius: 15px;
-    border: .5px solid #fff;
+    border: .5px solid var(--seconde-color);
     background: transparent;
-    color:white; 
+    color:var(--seconde-color); 
     /* font-size:2em; */
     padding: 0 8px;
     /* opacity:0;  */
 }
 button:hover{
-box-shadow: 0 0 10px white;  
+box-shadow: 0 0 10px var(--seconde-color);  
 }
 button:active{
     color: aqua;
@@ -37,7 +42,7 @@ button:active{
       flex: 1 1 40%;  
       box-sizing: border-box;
       opacity:0; 
-      /* border:.5px solid white; */
+      /* border:.5px solid var(--seconde-color); */
       /* margin-left: 1%; */
 }
 #container{  
@@ -52,12 +57,21 @@ button:active{
     font-size:20px;
     border-radius: 15px;
     margin: 0 0 10px 0;
-    border: .5px solid #fff;
-    color:white;
+    border: .5px solid var(--seconde-color);
+    color:var(--seconde-color);
+    text-shadow: 0 0 5px gray;
     background: transparent; 
 }
-#input:focus{
-    box-shadow: 0 0 10px    white;
+input::placeholder{
+    text-shadow: none;
+}
+input:focus{
+    box-shadow: 0 0 10px    var(--seconde-color);
+    outline: none;
+}
+
+#result p, #noms p{
+    text-shadow: 0 0 10px var(--seconde-color);
 }
 .fouter{
     position:fixed;

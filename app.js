@@ -1,3 +1,4 @@
+
 const input = document.getElementById("input");
 const result = document.getElementById("result");
 const nom = document.getElementById("noms");
@@ -8,11 +9,12 @@ let donnees = 0;
 let nombre = 0;
 let state = 0;
 let hasard = null;
-let index = 0;
+let index = 0; 
 let place = 0;
 let place2= 0;
 let data = [];
 let dataResult = [];
+const date = new Date();
 
 
 btnHasard.style.opacity = "0"
@@ -28,7 +30,7 @@ btnAjout.addEventListener("click", (e) => {
         input.style.boxShadow = "0 0 9px white"
         data.push(input.value); 
         place2 += 1;
-        nom.innerHTML += "<p>" +place2+". " +input.value + "</p> ";
+        nom.innerHTML += "<p>" +place2+". " +input.value + " <span class='del'>del</span> </p> ";
         input.value = ""; 
         nom.style.opacity = "1"
         btnHasard.style.opacity = "1"
@@ -56,7 +58,7 @@ btnHasard.addEventListener("click", () => {
         hasard = data[Math.floor(Math.random() * data.length)];
         index = data.findIndex((e) => e === hasard);
 
-        result.innerHTML += `<p>${place}. ${data[index]} </p>`;
+        result.innerHTML += `<p>${place}. ${data[index]}</p>`;
         data.splice(index, 1);
         console.log(data);
         state = true;
@@ -68,4 +70,6 @@ btnReset.addEventListener("click", (e) => {
     e.preventDefault();
     location.reload()});    
 
-    /* faire en sotye que le nom puisse s'effacer lorsqu'il est choisie qu hasard*/
+
+    document.getElementById('annee').textContent = date.getFullYear();
+    /* faire en sorte que le nom puisse s'effacer lorsqu'il est choisie qu hasard*/
