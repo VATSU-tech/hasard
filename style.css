@@ -10,13 +10,13 @@
 
 :root {
     --premiere-color: gray;
-    --seconde-color: #ffffff;
+    --seconde-color: #e5e5e5;
     --troisieme-color: #1c1c1c;
     --quatrieme-color:aqua;
 }
 
 body {
-    background: linear-gradient(to bottom, var(--premiere-color),  #2e2e2e);
+    background: linear-gradient(to bottom, var(--premiere-color),  var(--seconde-color));
     background-repeat: no-repeat;
     background-attachment: fixed;
     position: relative;
