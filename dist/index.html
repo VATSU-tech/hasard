@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr" translate="no">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="VATSU MALAMBO">
+    <meta name="keyword" content="vatsu, vatsu site, nom au hasard, hasard, hasard.vatsu,hasard dans l'ordre,hasard numeroté">
+    <meta name="google" content="notranslate">
+    <meta name="description" content="Entrer des nom et les avoir au hasard, ce site vous aide si vous n'arriver pas a vous decider">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="var(--premiere-color)">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="/assets/icon/headerIcon.svg">
+    <link rel="icon" type="image/svg+xml" href="/assets/icon/headerIcon.svg">
+    <link rel="stylesheet" href="style2.css">
+    <script type="module" src="app.js" defer></script>
+    <title>Hasard | VATSU</title>
+</head>
+
+<body>
+    <div class="annimation">
+    </div>
+    <div>
+        <h1 style="color: #fff;">Entrer les nom ici </h1>
+        <div class="joutGroupe">
+            <input type="text" required name="nombre" focus id="input" placeholder="ajouter un nom" class="element"
+                data-title="taper le nom ici">
+            <button id="btn-ajouter" class="element" data-title="cliquer pour ajouter">+</button>
+            <div>
+                <input type="checkbox" name="checkboxGroupe" id="checkGroupe">
+                <label for="checkGroupe" class="element" data-title="cliquer pour avoir un resultat grouper">GR</label>
+            </div>
+            <div>
+                <select name="selectGroupe" id="selectGroupe">
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                </select>
+            </div>
+        </div><br><br>
+        <div>
+            <button id="btn-hasard">hasard</button>
+            <button id="btn-reset">reset</button><br><br>
+            <div id="container">
+                <div id="result">
+                    <h1>Génerer au hasard</h1>
+                </div>
+                <div id="noms">
+                    <h1>Vos noms</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class='fouter'>
+        <span>&copy; <span id="annee"></span> VATSU. All Rights Reserved.</span><a href="README.md"> &#9888;</a>
+    </div>
+</body>
+
+</html>
