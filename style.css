@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    text-align: center;
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    transition: .5s;
+    color: var(--seconde-color);
+}
+
+:root {
+    --premiere-color: gray;
+    --seconde-color: #e5e5e5;
+    --troisieme-color: #1c1c1c;
+    --quatrieme-color:aqua;
+}
+
+body {
+    background: linear-gradient(to bottom, var(--premiere-color),  var(--seconde-color));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+
+    /* overflow: hidden; */
+    background-size: 100% 100%;
+    padding-top:5%;
+}
+
+#errorText {
+    display: none;
+    color: darkred;
+    font-size: 2rem;
+}
+
+.joutGroupe{
+    gap: .5rem;
+    display: flex;
+    flex-direction:row;
+    justify-content: center;
+}
+
+.element:hover::after{
+    content: attr(data-title);
+    position: fixed;
+    text-wrap:none; 
+    color: var(--seconde-color); 
+    opacity: .5;
+    background-color: var(--troisieme-color);
+    transition: 2s;
+    border-radius: 5px;
+    padding:0 .3em .3em .3em;
+}
+
+input[type=checkbox]:checked + .element:hover::after{
+    content: none;
+}
+
+button {
+    border: .5px solid var(--seconde-color);
+    background: transparent;
+    height: 35px;
+    color: var(--seconde-color);
+    border-radius: 15px;
+    padding: 0 8px;
+}
+
+#btn-ajouter {
+    width: 35px;
+    border-radius: 50%;
+
+}
+
+button:hover {
+    box-shadow: 0 0 10px var(--seconde-color);
+}
+
+button:active {
+    color: var(--quatrieme-color);
+    background: transparent;
+    border: .5px solid var(--quatrieme-color);
+}
+
+input[type=checkbox]{
+    display: none;
+}
+
+input[type=checkbox]:checked + label::before{
+background-color: var(--seconde-color);
+filter: blur(1px);
+}
+label::before{
+    content: 'o';
+    color: transparent;
+    padding:0 .2rem;
+    margin: 0 .1rem 0 0; 
+    font-size: .7rem;
+    border-radius: 50rem;
+    border: .01rem solid var(--seconde-color);
+}
+
+label{opacity: .2;}
+label:hover, input[type=checkbox]:checked + label{opacity: 1;}
+
+#container>div {
+    flex: 1 1 40%;
+    box-sizing: border-box;
+    opacity: 0; 
+}
+
+#container {
+    gap: 10%;
+    display: flex; 
+    flex-wrap: wrap; 
+    width: 100%;
+}
+
+#input {
+    height: 30px;
+    width: 250px;
+    font-size: 20px;
+    border-radius: 15px;
+    margin: 0 0 10px 0;
+    border: .5px solid var(--seconde-color);
+    color: var(--seconde-color);
+    text-shadow: 0 0 5px gray;
+    background: transparent;
+}
+
+.inputAnimation {
+    animation: faden 5s ease-in-out infinite forwards;
+}
+
+@keyframes faden {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0px var(--seconde-color);
+    }
+
+    50% {
+        box-shadow: 0 0 10px var(--seconde-color);
+    }
+
+}
+
+input::placeholder {
+    text-shadow: none;
+}
+
+input:hover {
+    animation: none;
+
+}
+
+input:focus {
+    box-shadow: 0 0 10px var(--seconde-color);
+    outline: none;
+}
+
+select{
+    display: none;
+    background-color: transparent;
+    border: .01rem solid var(--seconde-color);
+    border-radius: 5px;
+    outline: none;
+}
+select:hover{
+    background-color: var(--seconde-color);
+    color: var(--premiere-color);
+}
+select option{
+    border-radius: 5px;
+    color: var(--premiere-color);
+    background-color: var(--seconde-color); 
+}
+
+#result,
+#noms {
+    text-shadow: 0 0 10px var(--seconde-color);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    gap: -5rem;
+    color: #000;
+}
+
+#result p,#result p font,
+#noms p,#noms p font{
+    margin: .3rem 0;
+    color: #000;
+}
+
+.fouter {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    font-size: .5em;
+    text-align: center;
+    align-items: center;
+}
+
+.fouter span {
+    font-size: 1em;
+}
+
+.fouter a {
+    text-decoration: none;
+    right: 2px;
+    position: fixed;
+    color: black;
+    font-size: 1em;
+}
+
+@media screen and (max-width:620px) {
+    #container>div {
+        flex: 1 1 200px;
+    }
+}
+
+/* ====== PCB BACKGROUND (SVG) ====== */
+.pcb {
+    position: fixed;
+    inset: 0;
+    z-index: -2;
+    opacity: .8;
+    pointer-events: none;
+    /* background: radial-gradient(800px 400px at 20% 10%, #0c1b38 0%, transparent 60%); */
+    mask: linear-gradient(180deg, #000 50%, transparent 100%);
+}
+
+.pcb svg {
+    width: 1800px;
+    height: auto;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: .9
+}
+
+.trace {
+    fill: none;
+    stroke: var(--premiere-color);
+    stroke-width: 2;
+    stroke-linecap: round;
+    opacity: .2;
+    filter: drop-shadow(0 0 3px var(--premiere-color))
+}
+
+.trace.dim {
+    stroke: var(--premiere-color)
+}
+
+.pulse {
+    stroke-dasharray: 6 12;
+    animation: flow 3s linear infinite;
+}
+@keyframes flow {
+    to {
+        stroke-dashoffset: 10
+    }
+}
+.reverse{
+    animation: flowReverse 3s linear infinite ;
+}
+
+@keyframes flowReverse {
+    to {
+        stroke-dashoffset: -10
+    }
+}
+
+.node {
+    fill: var(--premiere-color);
+    filter: drop-shadow(0 0 6px var(--premiere-color))
+}
+
+.node.blink {
+    animation: blink 1.8s ease-in-out infinite
+}
+
+@keyframes blink {
+    50% {
+        opacity: .2
+    }
+}
+
+.waves {
+    position: fixed;
+    inset: auto 0 -30px 0;
+    height: 220px;
+    z-index: -1;
+    pointer-events: none
+}
+
+.wave {
+    position: absolute;
+    inset: auto 0 0 0;
+    height: 220px;
+    opacity: .6
+}
+
+.wave svg {
+    width: 200%;
+    height: 100%
+}
+svg path{
+    fill: var(--premiere-color);
+}
+
+.wave:nth-child(1) {
+    animation: drift 14s ease-in-out infinite forwards;
+    opacity: .08;
+}
+
+.wave:nth-child(2) {
+    animation: drift 22s ease-in-out infinite reverse forwards;
+    opacity: .05
+}
+
+.wave:nth-child(3) {
+    animation: drift 38s ease-in-out infinite forwards;
+    opacity: .01; 
+}
+
+@keyframes drift {
+    0%,100%{
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-50%)
+    }
+}::-webkit-scrollbar {
+  width: 5px; 
+  background: linear-gradient(to bottom, var(--premiere-color), var(--seconde-color));
+  transition: width .5s; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to top , var(--premiere-color), var(--seconde-color));
+  /* background: var(--premiere-color); */
+  border-radius: 9px;
+}
+::-webkit-scrollbar:hover{ 
+  width: 12px;
+  
+}
