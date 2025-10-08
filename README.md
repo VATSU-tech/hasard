@@ -1,6 +1,6 @@
-## hasard (nom au hasard)
+# hasard
 
-ceci est un site ou on peut entrer des noms est les avoir mumerote au hasard dans l'application
+__ceci est une application ou on peut entrer des noms est les avoir dans un hasard grouper ou nom__
 
 - [Auteur: VATSU MALAMBO]
 - [Date de creation : JUILLET 2025]

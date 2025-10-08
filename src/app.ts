@@ -81,12 +81,7 @@ annimationContainer.innerHTML = `<div class="pcb" aria-hidden="true">
                 </svg>
             </div>
         </div>`;
-let i:number = 1;
-// while(i < 10){ 
-//   selectGroupe.innerHTML=`<option value=${i}>${i}</option>`;
-//   i++;
-//   console.log(i)
-// }
+let i:number = 1; 
 
 //-----------------------------------------------
 //fonctions
@@ -106,12 +101,14 @@ const addName = ()=>{
     input.value = "";
     nom.style.opacity = "1";
     btnHasard.style.opacity = "1";
-    console.log(data);
+    // console.log(data);
   }
 }
 
 //genere hasard_________________________________________________
 const genereHasard = ()=>{
+  nom.innerHTML +=`<h1 style='margin:-1em 0'>_______________<h1>`;
+  place2 = 0
   while (data.length > dataResult.length) {
       place += 1;
       result.style.opacity = "1";
@@ -122,13 +119,13 @@ const genereHasard = ()=>{
       
       result.innerHTML += `<p>${place}. ${data[index]}</p>`;
       data.splice(index, 1);
-      console.log(data);
+      // console.log(data);
       state = true;
     }
     if (data.length === 0) {
       place = 0;
       btnHasard.style.opacity = "0";
-      state ? (result.innerHTML += `<h1 style='color:var(--troisieme-color)'>Fin</h1>`) : (state = false);
+      state ? (result.innerHTML += `<h1 style='margin-top:-1em'>_______________</h1>`) : (state = false);
       state = false;
     } 
 }
@@ -140,7 +137,7 @@ const genereHasardGroupe = (Ngroupe:number)=>{
     result.innerHTML += `<h2 style=' margin:0;'> Groupe ${nomGroupe += 1} </h2>`;
     if(data.length <= Ngroupe) Ngroupe = data.length
     while(Ngroupe > grouplength){
-      if(data[index] === undefined)console.log(data[index])
+      // if(data[index] === undefined)console.log(data[index])
         place += 1;
         result.style.opacity = "1";
         btnHasard.style.opacity = "1";
@@ -158,7 +155,7 @@ const genereHasardGroupe = (Ngroupe:number)=>{
     if (data.length === 0) {
       place = 0;
       btnHasard.style.opacity = "0";
-      state ? (result.innerHTML += `<h1 style='color:var(--troisieme-color);'>Fin</h1>`) : (state = false);
+      state ? (result.innerHTML += `<h1 style='margin-top:-1em'>_______________</h1>`) : (state = false);
       state = false;
     } 
 }
@@ -194,3 +191,6 @@ btnReset.addEventListener("click", (e) => {
   location.reload();
 });
 // ________________________________________________________________________________________________________________________________________________________
+
+document.addEventListener('scroll', (e)=> console.log(e.timeStamp))
+export{};
