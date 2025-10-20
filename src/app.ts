@@ -12,10 +12,8 @@ const annimationContainer = document.querySelector('.annimation') as HTMLElement
 let data: string[] = [];
 let state: boolean;
 let index = 0;
-let place = 0;
-let nombre = 0;
-let place2 = 0;
-let donnees = 0;
+let place = 0; 
+let place2 = 0; 
 let hasard = '';
 let nomGroupe = 0;
 let dataResult = [];
@@ -132,7 +130,7 @@ const genereHasard = ()=>{
 
 
 //genere hasard par groupe_____________________________________________
-const genereHasardGroupe = (Ngroupe:number)=>{ 
+const genereHasardGroupe = (Ngroupe:number): void=>{ 
   while (data.length > dataResult.length) {
     result.innerHTML += `<h2 style=' margin:0;'> Groupe ${nomGroupe += 1} </h2>`;
     if(data.length <= Ngroupe) Ngroupe = data.length
@@ -192,5 +190,4 @@ btnReset.addEventListener("click", (e) => {
 });
 // ________________________________________________________________________________________________________________________________________________________
 
-document.addEventListener('scroll', (e)=> console.log(e.timeStamp))
-export{};
+document.addEventListener('scroll', (e)=> console.log(e.timeStamp)) 
