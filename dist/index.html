@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tirage au Hasard — App</title>
+  <!-- <link rel="manifest" href="/manifest.json" /> -->
+  <script type="module" crossorigin src="/assets/index-CQIqhELX.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-U7TlhI0M.css">
+</head>
+
+<body>
+  <main class="container" id="app">
+    <h1>Tirage au Hasard</h1>
+
+    <div class="input-row">
+      <label for="input">Nom</label>
+      <input id="input" type="text" aria-label="Nom" placeholder="Entrez un nom" />
+      <button id="btn-ajouter" aria-label="Ajouter nom">Ajouter</button>
+    </div>
+
+    <div class="controls">
+      <label class="labelInput">
+        <input id="checkGroupe" type="checkbox" />
+        Tirage par groupe
+      </label>
+      <select id="selectGroupe" aria-label="Taille du groupe" style="display:none">
+        <option value="2">2</option>
+        <option value="3" selected>3</option>
+        <option value="4">4</option>
+        <option value="4">5</option>
+        <option value="4">6</option>
+        <option value="4">7</option>
+        <option value="4">8</option>
+        <option value="4">9</option>
+        <option value="4">10</option> 
+      </select>
+    </div>
+
+    <section id="liste">
+      <div class="Afficher">
+        <h2>Participants</h2> 
+        <button id="btn-afficher">Afficher Plus</button>
+      </div>
+      <div id="noms" aria-live="polite"  class="plusMoins"></div>
+    </section>
+
+    <div id="actions" class="actions">
+      <button id="btn-hasard" disabled>Générer</button>
+      <button id="btn-reset">Réinitialiser</button>
+      <button id="btn-undo" disabled>Annuler suppression</button>
+      <!-- <button id="btn-export" title="Exporter la liste en CSV">Exporter CSV</button> -->
+      <!-- <button id="btn-print" title="Imprimer">Imprimer</button> -->
+    </div>
+
+    <section id="result" aria-live="polite"></section>
+  </main>
+
+</body>
+
+</html>
