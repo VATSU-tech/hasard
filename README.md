@@ -37,13 +37,13 @@
 ## ⚙️ Fonctionnalités modernes
 
 - ✅ **Undo / Supprimer des participants**  
-- 🧩 **Import CSV** (ajoutez vos noms en masse)  
-- 📜 **Export CSV / Impression directe**  
+- 🧩 **Import CSV** (ajoutez vos noms en masse)  ⚠
+- 📜 **Export CSV / Impression directe**  ⚠
 - 🧠 **Mémoire locale automatique (LocalStorage)**  
 - 🗂️ **Groupes aléatoires dynamiques**  
 - 🌗 **Mode clair / sombre** (personnalisable via Sass)  
 - 🔧 **TypeScript + Vite = Performance et sécurité**  
-- ⚡ **Service Worker & Manifest PWA**  
+- ⚡ **Service Worker & Manifest PWA**  ⚠
 - 💅 **Interface fluide & responsive**
 
 ---
