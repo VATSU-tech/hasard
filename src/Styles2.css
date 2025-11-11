@@ -1,0 +1,293 @@
+:root {
+  --second-color: rgb(213, 202, 0);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #330000;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  transition: 0.7s all ease-in-out;
+}
+
+body {
+  background: radial-gradient(1200px 700px at 80% 10%, #ffcccc 0%, transparent 60%), radial-gradient(1200px 700px at 10% 80%, #ffcccc 0%, transparent 60%), linear-gradient(180deg, #ff9999, #ffcccc 35%, #ff9999 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #ff9999;
+  border-radius: 8px;
+}
+
+a {
+  text-decoration: none;
+  border: none;
+}
+a:hover {
+  border-bottom: 1px solid #330000;
+  border-bottom-color: rgb(213, 202, 0);
+}
+a:active {
+  color: rgb(213, 202, 0);
+  border-bottom-color: #330000;
+}
+
+button {
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 8px;
+  color: #330000;
+  background-color: #ff9999;
+  border: 0.1px solid #ffcccc;
+}
+button:hover {
+  border: 0.1px solid rgb(213, 202, 0);
+}
+button:active {
+  transition: none;
+  background-color: #ffcccc;
+}
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background-color: #ff9999;
+  border: 0.1px solid #ffcccc;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin: 1rem 0;
+  padding: 0 1rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0 0 1rem #ffcccc;
+}
+
+h1 {
+  border: 0.01px solid #ffcccc;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+/*header _______________________________________________________________________________ */
+header {
+  z-index: 1;
+  background: linear-gradient(22.5deg, #ffcccc, #ff9999, #ffcccc, #ff9999, #ffcccc);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  width: 100%;
+  padding: 0 2rem 0;
+  position: absolute;
+  top: 0;
+  box-shadow: 0 0 1rem #ffcccc, 0 0 2rem #ff9999;
+}
+header nav ul {
+  display: flex;
+  gap: 2rem;
+}
+header nav ul li {
+  list-style: none;
+}
+header .theme {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  cursor: pointer;
+  background-color: #ffcccc;
+  padding: 0.15rem;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+}
+header .theme span {
+  display: flex;
+  flex-direction: row;
+  background-color: #ff9999;
+  padding: 0.1rem;
+  border-radius: 8px;
+}
+header .theme span:hover {
+  transform: scale(1.1);
+}
+header .theme span .active {
+  background-color: #ffcccc;
+}
+header .theme input {
+  display: none;
+}
+header .theme label {
+  height: 25px;
+  width: 25px;
+  background-color: red;
+  color: transparent;
+  border-radius: 16px;
+}
+header .theme label:hover {
+  transform: scale(1.1);
+}
+
+/* --------------------------------------------------------------------------------------------- */
+/* main__________________________________________________________________________________________ */
+main .root {
+  background: linear-gradient(22.5deg, #ffcccc, #ff9999, #ffcccc, #ff9999, #ffcccc);
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 25px;
+  max-width: 750px;
+  width: 100%;
+  /* -------------------------------------------------------------------------------- */
+  /* ______________________________________________________________________________ */
+  /* -------------------------------------------------------------------------------- */
+  /*Participants _____________________________________________________________________________ */
+}
+main .root .control {
+  margin: 1rem 0;
+  display: flex;
+  width: 100%;
+}
+main .root .control .inputName {
+  width: 100%;
+  /* input__________________________________________________________ */
+  /* Groupe______________________________________________________________________ */
+}
+main .root .control .inputName label {
+  font-weight: 700;
+  font-size: large;
+}
+main .root .control .inputName input {
+  background-color: #ff9999;
+  outline: none;
+  flex: 1;
+  border-radius: 8px;
+  padding: 8px;
+  width: 65%;
+  border: 0.1px solid #ffcccc;
+  text-shadow: 0 0 1rem #ffcccc;
+}
+main .root .control .inputName input:focus {
+  border: 0.1px solid rgb(213, 202, 0);
+}
+main .root .control .inputName #checkbox {
+  display: none;
+}
+main .root .control .inputName .cbxLabel {
+  border: 0.1px solid #ffcccc;
+  background-color: #ff9999;
+  padding: 4px;
+  width: 100%;
+  font-weight: 100;
+  border-radius: 8px;
+}
+main .root .control .inputName .ajust {
+  margin-top: 1rem;
+}
+main .root .control .inputName #checkbox:checked + .cbxLabel {
+  transition: none;
+  font-weight: 500;
+  background-color: #ffcccc;
+  border: 0.1px solid rgb(213, 202, 0);
+}
+main .root .control .inputName select {
+  /* display: none; */
+  background-color: #ff9999;
+  padding: 6px;
+  margin-top: 0.1rem;
+  border-radius: 8px;
+  border: 0.1px solid #ffcccc;
+}
+main .root .control .inputName select option {
+  border-radius: 8px;
+}
+main .root .actions {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1rem;
+}
+main .root .afficher {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0.7rem;
+}
+main .root .small {
+  box-shadow: 0 0 1rem #ffcccc;
+  padding: 0.5rem;
+  max-height: 300px;
+  overflow: auto;
+  border-radius: 20px 5px 5px 20px;
+}
+main .root #noms {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+main .root #noms::-webkit-scrollbar-thumb {
+  background-color: #ffcccc;
+  border: 1px solid #ffcccc;
+  box-shadow: 0 0 1rem #ffcccc;
+}
+main .root #noms .participant-row {
+  background-color: #ffcccc;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: flex;
+  width: 98%;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 35px;
+  padding: 0 1rem;
+}
+main .root #noms .participant-row:hover {
+  background: linear-gradient(22.5deg, #ffcccc, #ff9999, #ffcccc);
+}
+main .root #noms .participant-row button {
+  padding: 0;
+  background-color: transparent;
+  color: rgb(255, 112, 112);
+  border: none;
+  transition: 0.1s;
+}
+main .root #noms .participant-row button:hover {
+  transition: 0.1s;
+  border: none;
+  background-color: transparent;
+  transform: scale(1.5);
+}
+main .root #result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main .root #result p {
+  background-color: #ffcccc;
+  border-radius: 8px;
+  width: 60%;
+  padding: 0.2rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+footer {
+  position: relative;
+}
+
+/* --------------------------------------------------------------------------------------- */
+
+/*# sourceMappingURL=styles.css.map */
