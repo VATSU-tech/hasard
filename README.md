@@ -1,4 +1,6 @@
-# ⚠ Le code source et les autres ameliorations arrive bientot !
+# ⚠ Important
+  - **Le code source se trouve sur la branche source**
+  - **les autres ameliorations arrive bientot !**
 
 # 🎲 HasardApp — Laissez le hasard décider pour vous
 
