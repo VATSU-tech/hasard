@@ -11,7 +11,7 @@
 
 ## ✨ À propos
 
-**HasardApp** est une application web moderne qui vous permet de :
+**HasardApp** est une application web moderne qui vous pexrmet de :
 - 🎯 **Tirer au sort des noms** ou des éléments en un clic,  
 - 👥 **Créer des groupes aléatoires** selon la taille souhaitée,  
 - 💾 **Sauvegarder vos listes localement**,  
