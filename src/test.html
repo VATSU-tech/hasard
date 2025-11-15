@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Démo des unités CSS</title>
+  <style>
+    body {
+      font-size: 16px;
+      /* base pour rem et em */
+      margin: 20px;
+    }
+
+    .bloc {
+      margin-bottom: 20px;
+      padding: 10px;
+      background: lightblue;
+      color: #000;
+    }
+
+    .px {
+      width: 200px;
+    }
+
+    .em {
+      width: 15em;
+    }
+
+    .rem {
+      width: 15rem;
+    }
+
+    .percent {
+      width: 50%;
+      background: lightgreen;
+    }
+
+    .vw {
+      width: 50vw;
+      background: lightcoral;
+    }
+
+    .vh {
+      height: 30vh;
+      background: lightgoldenrodyellow;
+    }
+
+    .ch {
+      width: 30ch;
+      background: lightgray;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2>Démo des unités CSS</h2>
+
+  <div class="bloc px">Largeur en <strong>px</strong> (200px)</div>
+  <div class="bloc em">Largeur en <strong>em</strong> (15em)</div>
+  <div class="bloc rem">Largeur en <strong>rem</strong> (15rem)</div>
+  <div class="bloc percent">Largeur en <strong>%</strong> (50% du body)</div>
+  <div class="bloc vw">Largeur en <strong>vw</strong> (50% de la largeur de l’écran)</div>
+</body>
+</html>

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -91,4 +92,110 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 </body>
 
+=======
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MTQ2DS9F');</script>
+<!-- End Google Tag Manager -->
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-79WB8CYJGN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-79WB8CYJGN');
+</script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="author" content="VATSU MALAMBO">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=delete" />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <meta name="keywords" content="hasard, hasard app, hasard vatsu, hasard group, hasard name, noms au hasard, melanger des nom, faire des groupes des noms au hasard">
+  <meta name="description" content="🎲 une application moderne qui permet de tirer au sort, répartir ou créer des groupes en un clic. Elle automatise les décisions difficiles pour vous faire gagner du temps, éviter les conflits et ajouter une touche d’équité dans vos choix.">
+  <title>Hasard  App</title>
+  <link rel="manifest" href="/manifest.json">
+  <link rel="icon" type="image/svg+xml" href="/public/icons/icon-72x72.svg" /> 
+  <script type="module" crossorigin src="/src/main.ts"></script>
+  <link rel="stylesheet" crossorigin href="/src/styles.css">
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTQ2DS9F"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  <header>
+    <ul>
+      <li>Hasard</li>
+      <li><a href="./src/test.html">Compteur</a></li>
+    </ul>
+    <button class="toggle-theme" id="theme-toggle">Theme</button>
+  </header>
+  <main class="container hide " id="app">
+    <h1>Tirage au Hasard</h1>
+
+    <div class="input-row">
+      <label for="input">Nom</label>
+      <input id="input" type="text" aria-label="Nom" placeholder="Entrez un nom" />
+      <button id="btn-ajouter" aria-label="Ajouter nom">Ajouter</button>
+    </div>
+
+    <div class="controls">
+      <label class="labelInput" >
+        <input id="checkGroupe" type="checkbox" />
+        Tirage par groupe
+      </label>
+      <select id="selectGroupe" aria-label="Taille du groupe" style="display:none">
+        <option value="2">2</option>
+        <option value="3" selected>3</option>
+        <option value="4">4</option>
+        <option value="4">5</option>
+        <option value="4">6</option>
+        <option value="4">7</option>
+        <option value="4">8</option>
+        <option value="4">9</option>
+        <option value="4">10</option> 
+      </select>
+    </div>
+
+    <section id="liste">
+      <div class="Afficher">
+        <h2>Participants <span id="nombre-participant"></span></h2> 
+        <button id="btn-afficher" style="display: none;">Afficher Plus</button>
+      </div>
+      <div id="noms" aria-live="polite"  class="plusMoins"></div>
+    </section>
+
+    <div id="actions" class="actions">
+      <button id="btn-hasard" disabled>Générer</button>
+      <button id="btn-reset">Réinitialiser</button>
+      <button id="btn-undo" disabled>Annuler suppression</button>
+      <!-- <button id="btn-export" title="Exporter la liste en CSV">Exporter CSV</button> -->
+      <!-- <button id="btn-print" title="Imprimer">Imprimer</button> -->
+    </div>
+
+    <section id="result" aria-live="polite"></section>
+  </main>
+  <div class="container compteur" id="app">
+      <input id="input" type="text" aria-label="Nom" placeholder="Entrez le nom du comptage" />
+
+  </div>
+  <footer>
+    <span><a href="https://github.com/VATSU-tech/hasard.git" target="_blank" rel="noopenner">&copy; VATSU 2025 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M237.9 461.4C237.9 463.4 235.6 465 232.7 465C229.4 465.3 227.1 463.7 227.1 461.4C227.1 459.4 229.4 457.8 232.3 457.8C235.3 457.5 237.9 459.1 237.9 461.4zM206.8 456.9C206.1 458.9 208.1 461.2 211.1 461.8C213.7 462.8 216.7 461.8 217.3 459.8C217.9 457.8 216 455.5 213 454.6C210.4 453.9 207.5 454.9 206.8 456.9zM251 455.2C248.1 455.9 246.1 457.8 246.4 460.1C246.7 462.1 249.3 463.4 252.3 462.7C255.2 462 257.2 460.1 256.9 458.1C256.6 456.2 253.9 454.9 251 455.2zM316.8 72C178.1 72 72 177.3 72 316C72 426.9 141.8 521.8 241.5 555.2C254.3 557.5 258.8 549.6 258.8 543.1C258.8 536.9 258.5 502.7 258.5 481.7C258.5 481.7 188.5 496.7 173.8 451.9C173.8 451.9 162.4 422.8 146 415.3C146 415.3 123.1 399.6 147.6 399.9C147.6 399.9 172.5 401.9 186.2 425.7C208.1 464.3 244.8 453.2 259.1 446.6C261.4 430.6 267.9 419.5 275.1 412.9C219.2 406.7 162.8 398.6 162.8 302.4C162.8 274.9 170.4 261.1 186.4 243.5C183.8 237 175.3 210.2 189 175.6C209.9 169.1 258 202.6 258 202.6C278 197 299.5 194.1 320.8 194.1C342.1 194.1 363.6 197 383.6 202.6C383.6 202.6 431.7 169 452.6 175.6C466.3 210.3 457.8 237 455.2 243.5C471.2 261.2 481 275 481 302.4C481 398.9 422.1 406.6 366.2 412.9C375.4 420.8 383.2 435.8 383.2 459.3C383.2 493 382.9 534.7 382.9 542.9C382.9 549.4 387.5 557.3 400.2 555C500.2 521.8 568 426.9 568 316C568 177.3 455.5 72 316.8 72zM169.2 416.9C167.9 417.9 168.2 420.2 169.9 422.1C171.5 423.7 173.8 424.4 175.1 423.1C176.4 422.1 176.1 419.8 174.4 417.9C172.8 416.3 170.5 415.6 169.2 416.9zM158.4 408.8C157.7 410.1 158.7 411.7 160.7 412.7C162.3 413.7 164.3 413.4 165 412C165.7 410.7 164.7 409.1 162.7 408.1C160.7 407.5 159.1 407.8 158.4 408.8zM190.8 444.4C189.2 445.7 189.8 448.7 192.1 450.6C194.4 452.9 197.3 453.2 198.6 451.6C199.9 450.3 199.3 447.3 197.3 445.4C195.1 443.1 192.1 442.8 190.8 444.4zM179.4 429.7C177.8 430.7 177.8 433.3 179.4 435.6C181 437.9 183.7 438.9 185 437.9C186.6 436.6 186.6 434 185 431.7C183.6 429.4 181 428.4 179.4 429.7z"/></svg></a></span>
+  </footer>
+
+</body>
+
+>>>>>>> Stashed changes
 </html>

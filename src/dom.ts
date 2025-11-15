@@ -1,0 +1,14 @@
+export const input = document.getElementById("input") as HTMLInputElement;
+export const nomContainer = document.getElementById("noms") as HTMLElement;
+export const result = document.getElementById("result") as HTMLElement;
+export const btnReset = document.getElementById("btn-reset") as HTMLButtonElement;
+export const btnHasard = document.getElementById("btn-hasard") as HTMLButtonElement;
+export const btnAjout = document.getElementById("btn-ajouter") as HTMLButtonElement;
+export const toggleBtn = document.getElementById("theme-toggle") as HTMLButtonElement;
+export const selectGroupe = document.getElementById("selectGroupe") as HTMLSelectElement;
+export const inputCheckbox = document.getElementById("checkGroupe") as HTMLInputElement;
+export const btnUndo = document.getElementById("btn-undo") as HTMLButtonElement;
+export const btnExport = document.getElementById("btn-export") as HTMLButtonElement;
+export const btnPrint = document.getElementById("btn-print") as HTMLButtonElement;
+export const btnAfficher = document.getElementById('btn-afficher') as HTMLButtonElement;
+export const nombreParticipants = document.getElementById('nombre-participant') as HTMLElement;
