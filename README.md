@@ -1,5 +1,3 @@
-# ⚠ Le code source et les autres ameliorations arrive bientot !
-
 # 🎲 HasardApp — Laissez le hasard décider pour vous
 
 [![Made with TypeScript](https://img.shields.io/badge/Made%20with-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
